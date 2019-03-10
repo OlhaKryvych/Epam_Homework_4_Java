@@ -3,6 +3,9 @@ package com.epam.homework4;
 import java.util.Scanner;
 
 public class Task_Extra_2 {
+    public static String str1 = "12345678910";
+    public static String str2 = "987654321";
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter height of piramid please: ");
@@ -19,16 +22,21 @@ public class Task_Extra_2 {
             for(int j = 0; j < height - i; j++){
                 System.out.print(" ");
             }
-            printNumbers(i+1);
+            printNumbers(i/*+1*/);
             System.out.println();
         }
     }
     public static void printNumbers(int maxNum){
-        for(int i = 0; i < maxNum; i++){
-            System.out.print(i+1);
-        }
-        for(int i = maxNum-1; i > 0; i--){
-            System.out.print(i);
-        }
+        System.out.print(str1.substring(0,maxNum+1));
+        System.out.print(str2.substring(9-maxNum));
     }
+
+//    public static void printNumbers(int maxNum){
+//        for(int i = 0; i < maxNum; i++){
+//            System.out.print(i+1);
+//        }
+//        for(int i = maxNum-1; i > 0; i--){
+//            System.out.print(i);
+//        }
+//    }
 }
